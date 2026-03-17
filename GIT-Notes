@@ -1,0 +1,147 @@
+# Git & GitHub – Complete Interview Preparation Notes
+
+
+# 1. Introduction to Git & GitHub
+
+## What is Git?
+
+Git is a **distributed version control system** used to track changes in code. It allows multiple developers to work on the same project without conflicts.
+
+## What is GitHub?
+
+GitHub is a **cloud-based platform** that hosts Git repositories and enables collaboration, version tracking, and code management.
+
+## >> Git is used for tracking changes locally, while GitHub is used for storing code remotely and collaborating with teams.
+
+
+# 2. Git Workflow 
+
+## Flow: Working Directory → Staging Area → Local Repository → Remote Repository
+
+## Commands:
+
+* git init → Initialize repository
+* git add → Move code to staging
+* git commit → Save changes
+* git push → Upload to GitHub
+
+
+## >> Git uses a staging area as a safety layer before committing changes. This helps control what code gets pushed to the repository.
+
+
+
+# 3. Creating and Pushing a Repository
+
+## Steps:
+
+1. Create a repository in GitHub (without README)
+2. Initialize locally:
+   git init
+3. Connect to remote:
+   git remote add origin <repo-url>
+4. Add and commit:
+   git add .
+   git commit -m "Initial commit"
+5. Push:
+   git push -u origin master
+
+
+## >> We first create a local repository, link it to GitHub, and then push code. The remote origin acts as a connection between local and remote repositories.
+
+
+# 4. Clone vs Fork
+
+## Clone: Downloads a repository from GitHub to local system.
+
+Command: git clone <repo-url>
+
+## Fork: Creates a copy of someone else's repository in your GitHub account.
+
+
+## We use clone to work on a repository locally. Fork is used when we don’t have direct access to the original repository.
+
+
+# 5. Branching Strategy
+
+## Why Branching?
+
+To work on features independently without affecting main code.
+
+## Commands:
+
+git checkout -b feature-branch
+git add .
+git commit -m "feature added"
+git push origin feature-branch
+
+
+## >> In real projects, we never work directly on the main branch. We create feature branches, make changes, and then merge via pull requests.
+
+# 6. Pull Request (PR)
+
+## What is PR >> A Pull Request is a request to merge changes from one branch to another.
+
+## Steps:
+
+1. Push code to feature branch
+2. Create PR in GitHub
+3. Review and approve
+4. Merge changes
+
+##  Pull Requests are used for code review and maintaining code quality before merging into the main branch.
+
+
+# 7. Important Git Commands
+
+* git status → Check file changes
+* git diff → View code differences
+* git log → View commit history
+* git branch → List branches
+* git pull → Get latest changes
+
+## These commands help in tracking, reviewing, and managing code changes efficiently.
+
+
+# 10. Real-Time DevOps Workflow
+
+## Process:
+
+1. Developer creates feature branch
+2. Makes changes and commits
+3. Pushes code to GitHub
+4. Raises Pull Request
+5. Code review happens
+6. Merge to main branch
+7. CI/CD pipeline triggers deployment
+
+
+## >> In real projects, Git is integrated with CI/CD pipelines. Code changes trigger automated builds and deployments after approval.
+
+
+
+
+## Q: What is Git >> Git is a distributed version control system used to track code changes.
+
+## Q: What is the difference between Git and GitHub >> Git is a tool, GitHub is a platform.
+
+## Q: What is staging area >> 
+It is an intermediate area where changes are prepared before committing.
+
+## Q: What is branching >> Creating a separate line of development to work independently.
+
+## Q: What is merge conflict >> When two changes conflict during merge.
+
+## Q: What is Pull Request >> A request to merge code after review.
+
+## Q: What is git clone >> Copying a repository from remote to local.
+
+## Q: What is git pull >> Fetching and merging latest code from remote.
+
+## Q: What is git push >> Uploading local commits to remote repository.
+
+## Q: Why use Git in DevOps >>To manage version control, collaboration, and automate deployments.
+
+
+## Final Interview Answer:
+
+“In my project, we use Git for version control. Developers create feature branches, commit changes, and push to GitHub. Pull Requests are used for review, and once approved, code is merged into the main branch. CI/CD pipelines are triggered automatically after merge.”
